@@ -1,0 +1,49 @@
+.wrapperFormAction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: blue;
+    ;
+    border: 1px solid grey;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputMovie {
+    width: 60%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.inputMovie:focus {
+    border-color: rgb(35, 107, 83);
+}
+
+.buttonSearchMovie {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notFoundQuery {
+    font-size: 18px;
+    font-weight: 600;
+    color: red;
+    margin-top: 15px;
+    text-align: center;
+}
