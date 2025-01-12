@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import MoviesPage from "./pages/MoviesPage/MoviesPage";
 import Navigation from "./components/Navigation/Navigation";
-import MovieDetailsPage from "./Pages/MovieDetailsPage/MovieDetailsPage";
+import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage";
 import MovieCast from "./components/MovieCast/MovieCast";
 import MovieReviews from "./components/MovieReviews/MovieReviews";
 
