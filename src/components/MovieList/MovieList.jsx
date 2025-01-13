@@ -1,8 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import styles from "./MovieList.module.css";
 
 const MoviesList = ({ movies, isLoading }) => {
+  const location = useLocation();
+
   return (
     <div>
       {isLoading ? (
@@ -15,7 +17,7 @@ const MoviesList = ({ movies, isLoading }) => {
               <li key={item.id} className={styles.movieItem}>
                 <NavLink
                   to={`/movies/${item.id}`}
-                  onClick={() => console.log("Item ID", item.id)}
+                  state={{ from: location }}
                 >
                   <img
                     src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
@@ -28,7 +30,7 @@ const MoviesList = ({ movies, isLoading }) => {
                   {item.release_date ? item.release_date : "Date unknown"}
                 </p>
                 <p>
-                  Vote average:{item.vote_average ? item.vote_average : "N/A"}
+                  Vote average: {item.vote_average ? item.vote_average : "N/A"}
                 </p>
               </li>
             ))}
@@ -39,3 +41,5 @@ const MoviesList = ({ movies, isLoading }) => {
 };
 
 export default MoviesList;
+
+
