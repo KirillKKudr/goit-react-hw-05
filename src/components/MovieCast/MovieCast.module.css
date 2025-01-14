@@ -1,0 +1,33 @@
+.castRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.actorItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.actorImage {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.noImagePlaceholder {
+  width: 100%;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  color: #666;
+}
+
+.actorName {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 14px;
+}

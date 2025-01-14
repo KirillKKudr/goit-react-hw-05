@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import s from "./MovieCast.module.css";
 
-
 const MovieCast = () => {
   const { moviesId } = useParams();
   const [cast, setCast] = useState([]);
@@ -29,27 +28,22 @@ const MovieCast = () => {
   }, [moviesId]);
 
   return (
-    <div className={s.wrapperActor}>
+    <div className={s.castRow}>
       {isLoading ? (
         <Loader />
       ) : cast && cast.length > 0 ? (
         cast.map((actor) => (
-          <div className={s.idActor} key={actor.id}>
+          <div className={s.actorItem} key={actor.id}>
             {actor.profile_path ? (
               <img
-                className={s.imgActor}
+                className={s.actorImage}
                 src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
                 alt={actor.name}
               />
             ) : (
-              <img className={s.noImage} src={noPhotos} alt="No Image" />
+              <div className={s.noImagePlaceholder}>No Image</div>
             )}
-            <div className={s.informActer}>
-              <p className={s.nameActor}>
-                <strong>{actor.name}</strong>
-              </p>
-              <p className={s.characterActor}>Character: {actor.character}</p>
-            </div>
+            <p className={s.actorName}>{actor.name}</p>
           </div>
         ))
       ) : (

@@ -1,0 +1,17 @@
+.button_one{
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px ;
+    margin-right: 10px;
+}
+
+.button_two{
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px ;
+    
+}

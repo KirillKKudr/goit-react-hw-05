@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { NavLink, Outlet, useParams, useLocation } from "react-router-dom";
 import { getFullDataMovie } from "../../Api/api";
 import Loader from "../../components/Loader/Loader";
+import styles from "../MovieDetailsPage/MovieDetailsPage.module.css"
 
 const MovieDetailsPage = () => {
   const { moviesId } = useParams();
@@ -32,8 +33,8 @@ const MovieDetailsPage = () => {
       <p>{fullData.overview}</p>
       <p>Rating: {fullData.popularity}</p>
       <nav>
-        <NavLink to="cast">Cast</NavLink>
-        <NavLink to="reviews">Reviews</NavLink>
+        <NavLink className={styles.button_one} to="cast">Cast</NavLink>
+        <NavLink className={styles.button_two} to="reviews">Reviews</NavLink>
       </nav>
       <Outlet />
     </div>
